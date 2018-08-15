@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/',
+  base: '/commonmark-vuepress/',
   title: "CommonMark Spec",
   themeConfig: {
     repo: 'https://github.com',
