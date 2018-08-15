@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blocks and inlines | CommonMark Spec</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/commonmark-vuepress/logo.png">
+    
+    <link rel="preload" href="/commonmark-vuepress/assets/css/0.styles.a10e70b6.css" as="style"><link rel="preload" href="/commonmark-vuepress/assets/js/app.66e8c4d4.js" as="script"><link rel="preload" href="/commonmark-vuepress/assets/js/6.11117854.js" as="script"><link rel="prefetch" href="/commonmark-vuepress/assets/js/5.56fac433.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/3.0f7c7ffe.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/4.b69c7f9c.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/7.accca9e3.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/8.64a5eca8.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/9.9a3e5730.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/10.c4ec4b3d.js"><link rel="prefetch" href="/commonmark-vuepress/assets/js/11.d4500ffb.js">
+    <link rel="stylesheet" href="/commonmark-vuepress/assets/css/0.styles.a10e70b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/commonmark-vuepress/" class="home-link router-link-active"><!----> <span class="site-name">CommonMark Spec</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://spec.commonmark.org/0.28/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Site
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/commonmark/CommonMark" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/yangjunjun/commonmark-vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://spec.commonmark.org/0.28/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Site
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/commonmark/CommonMark" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/yangjunjun/commonmark-vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/commonmark-vuepress/" class="sidebar-link">0 Home</a></li><li><a href="/commonmark-vuepress/1.Introduction.html" class="sidebar-link">1 Introduction</a></li><li><a href="/commonmark-vuepress/2.Preliminaries.html" class="sidebar-link">2 Preliminaries</a></li><li><a href="/commonmark-vuepress/3.Blocks_and_inlines.html" class="active sidebar-link">3 Blocks and inlines</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/commonmark-vuepress/3.Blocks_and_inlines.html#precedence" class="sidebar-link">Precedence</a></li><li class="sidebar-sub-header"><a href="/commonmark-vuepress/3.Blocks_and_inlines.html#container-blocks-and-leaf-blocks" class="sidebar-link">Container blocks and leaf blocks</a></li></ul></li><li><a href="/commonmark-vuepress/4.Leaf_blocks.html" class="sidebar-link">4 Leaf blocks</a></li><li><a href="/commonmark-vuepress/5.Container_blocks.html" class="sidebar-link">5 Container blocks</a></li><li><a href="/commonmark-vuepress/6.Inlines.html" class="sidebar-link">6 Inlines</a></li><li><a href="/commonmark-vuepress/7.Appendix_A_parsing_strategy.html" class="sidebar-link">Appendix: A parsing strategy</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="blocks-and-inlines"><a href="#blocks-and-inlines" aria-hidden="true" class="header-anchor">#</a> Blocks and inlines</h1> <p>We can think of a document as a sequence of
+<a href="@">blocks</a>---structural elements like paragraphs, block
+quotations, lists, headings, rules, and code blocks.  Some blocks (like
+block quotes and list items) contain other blocks; others (like
+headings and paragraphs) contain <a href="@">inline</a> content---text,
+links, emphasized text, images, code spans, and so on.</p> <h2 id="precedence"><a href="#precedence" aria-hidden="true" class="header-anchor">#</a> Precedence</h2> <p>Indicators of block structure always take precedence over indicators
+of inline structure.  So, for example, the following is a list with
+two items, not a list with one item containing a code span:</p> <div class="language-example extra-class"><pre class="language-text"><code>- `one
+- two`
+.
+&lt;ul&gt;
+&lt;li&gt;`one&lt;/li&gt;
+&lt;li&gt;two`&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><p>This means that parsing can proceed in two steps:  first, the block
+structure of the document can be discerned; second, text lines inside
+paragraphs, headings, and other block constructs can be parsed for inline
+structure.  The second step requires information about link reference
+definitions that will be available only at the end of the first
+step.  Note that the first step requires processing lines in sequence,
+but the second can be parallelized, since the inline parsing of
+one block element does not affect the inline parsing of any other.</p> <h2 id="container-blocks-and-leaf-blocks"><a href="#container-blocks-and-leaf-blocks" aria-hidden="true" class="header-anchor">#</a> Container blocks and leaf blocks</h2> <p>We can divide blocks into two types:
+<a href="@">container blocks</a>,
+which can contain other blocks, and <a href="@">leaf blocks</a>,
+which cannot.</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/commonmark-vuepress/2.Preliminaries.html" class="prev">
+          2 Preliminaries
+        </a></span> <span class="next"><a href="/commonmark-vuepress/4.Leaf_blocks.html">
+          4 Leaf blocks
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/commonmark-vuepress/assets/js/6.11117854.js" defer></script><script src="/commonmark-vuepress/assets/js/app.66e8c4d4.js" defer></script>
+  </body>
+</html>
