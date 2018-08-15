@@ -1,10 +1,12 @@
 module.exports = {
   base: '/commonmark-vuepress/',
   title: "CommonMark Spec",
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],  
   themeConfig: {
     repo: 'https://github.com/yangjunjun/commonmark-vuepress',
     nav: [
-      { text: 'Home', link: '/' },
       { text: 'Original Site', link: 'http://spec.commonmark.org/0.28/' },
       { text: 'Original Github', link: 'https://github.com/commonmark/CommonMark' },
     ],
