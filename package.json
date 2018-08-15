@@ -1,0 +1,15 @@
+{
+  "name": "commonmark-vuepress",
+  "version": "1.0.0",
+  "description": "commonmark in vuepress",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "author": "yangjunjun (ggiiss@qq.com)",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^0.14.2"
+  }
+}

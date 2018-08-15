@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction | CommonMark Spec</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.56cb666a.css" as="style"><link rel="preload" href="/assets/js/app.f781b73a.js" as="script"><link rel="preload" href="/assets/js/4.b69c7f9c.js" as="script"><link rel="prefetch" href="/assets/js/5.56fac433.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.0f7c7ffe.js"><link rel="prefetch" href="/assets/js/6.11117854.js"><link rel="prefetch" href="/assets/js/7.accca9e3.js"><link rel="prefetch" href="/assets/js/8.64a5eca8.js"><link rel="prefetch" href="/assets/js/9.9a3e5730.js"><link rel="prefetch" href="/assets/js/10.c4ec4b3d.js"><link rel="prefetch" href="/assets/js/11.d4500ffb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.56cb666a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CommonMark Spec</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="http://spec.commonmark.org/0.28/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Site
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/commonmark/CommonMark" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="http://spec.commonmark.org/0.28/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Site
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/commonmark/CommonMark" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">0 Home</a></li><li><a href="/1.Introduction.html" class="active sidebar-link">1 Introduction</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/1.Introduction.html#what-is-markdown" class="sidebar-link">What is Markdown?</a></li><li class="sidebar-sub-header"><a href="/1.Introduction.html#why-is-a-spec-needed" class="sidebar-link">Why is a spec needed?</a></li><li class="sidebar-sub-header"><a href="/1.Introduction.html#about-this-document" class="sidebar-link">About this document</a></li></ul></li><li><a href="/2.Preliminaries.html" class="sidebar-link">2 Preliminaries</a></li><li><a href="/3.Blocks_and_inlines.html" class="sidebar-link">3 Blocks and inlines</a></li><li><a href="/4.Leaf_blocks.html" class="sidebar-link">4 Leaf blocks</a></li><li><a href="/5.Container_blocks.html" class="sidebar-link">5 Container blocks</a></li><li><a href="/6.Inlines.html" class="sidebar-link">6 Inlines</a></li><li><a href="/7.Appendix_A_parsing_strategy.html" class="sidebar-link">Appendix: A parsing strategy</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="introduction"><a href="#introduction" aria-hidden="true" class="header-anchor">#</a> Introduction</h1> <h2 id="what-is-markdown"><a href="#what-is-markdown" aria-hidden="true" class="header-anchor">#</a> What is Markdown?</h2> <p>Markdown is a plain text format for writing structured documents,
+based on conventions for indicating formatting in email
+and usenet posts.  It was developed by John Gruber (with
+help from Aaron Swartz) and released in 2004 in the form of a
+<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener noreferrer">syntax description<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+and a Perl script (<code>Markdown.pl</code>) for converting Markdown to
+HTML.  In the next decade, dozens of implementations were
+developed in many languages.  Some extended the original
+Markdown syntax with conventions for footnotes, tables, and
+other document elements.  Some allowed Markdown documents to be
+rendered in formats other than HTML.  Websites like Reddit,
+StackOverflow, and GitHub had millions of people using Markdown.
+And Markdown started to be used beyond the web, to author books,
+articles, slide shows, letters, and lecture notes.</p> <p>What distinguishes Markdown from many other lightweight markup
+syntaxes, which are often easier to write, is its readability.
+As Gruber writes:</p> <blockquote><p>The overriding design goal for Markdown's formatting syntax is
+to make it as readable as possible. The idea is that a
+Markdown-formatted document should be publishable as-is, as
+plain text, without looking like it's been marked up with tags
+or formatting instructions.
+(<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreferrer">http://daringfireball.net/projects/markdown/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>)</p></blockquote> <p>The point can be illustrated by comparing a sample of
+<a href="http://www.methods.co.nz/asciidoc/" target="_blank" rel="noopener noreferrer">AsciiDoc<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> with
+an equivalent sample of Markdown.  Here is a sample of
+AsciiDoc from the AsciiDoc manual:</p> <div class="language- extra-class"><pre class="language-text"><code>1. List item one.
++
+List item one continued with a second paragraph followed by an
+Indented block.
++
+.................
+$ ls *.sh
+$ mv *.sh ~/tmp
+.................
++
+List item continued with a third paragraph.
+
+2. List item two continued with an open block.
++
+--
+This paragraph is part of the preceding list item.
+
+a. This list is nested and does not require explicit item
+continuation.
++
+This paragraph is part of the preceding list item.
+
+b. List item b.
+
+This paragraph belongs to item two of the outer list.
+--
+</code></pre></div><p>And here is the equivalent in Markdown:</p> <div class="language- extra-class"><pre class="language-text"><code>1.  List item one.
+
+    List item one continued with a second paragraph followed by an
+    Indented block.
+
+        $ ls *.sh
+        $ mv *.sh ~/tmp
+
+    List item continued with a third paragraph.
+
+2.  List item two continued with an open block.
+
+    This paragraph is part of the preceding list item.
+
+    1. This list is nested and does not require explicit item continuation.
+
+       This paragraph is part of the preceding list item.
+
+    2. List item b.
+
+    This paragraph belongs to item two of the outer list.
+</code></pre></div><p>The AsciiDoc version is, arguably, easier to write. You don't need
+to worry about indentation.  But the Markdown version is much easier
+to read.  The nesting of list items is apparent to the eye in the
+source, not just in the processed document.</p> <h2 id="why-is-a-spec-needed"><a href="#why-is-a-spec-needed" aria-hidden="true" class="header-anchor">#</a> Why is a spec needed?</h2> <p>John Gruber's <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener noreferrer">canonical description of Markdown's
+syntax<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+does not specify the syntax unambiguously.  Here are some examples of
+questions it does not answer:</p> <ol><li><p>How much indentation is needed for a sublist?  The spec says that
+continuation paragraphs need to be indented four spaces, but is
+not fully explicit about sublists.  It is natural to think that
+they, too, must be indented four spaces, but <code>Markdown.pl</code> does
+not require that.  This is hardly a &quot;corner case,&quot; and divergences
+between implementations on this issue often lead to surprises for
+users in real documents. (See <a href="http://article.gmane.org/gmane.text.markdown.general/1997" target="_blank" rel="noopener noreferrer">this comment by John
+Gruber<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.)</p></li> <li><p>Is a blank line needed before a block quote or heading?
+Most implementations do not require the blank line.  However,
+this can lead to unexpected results in hard-wrapped text, and
+also to ambiguities in parsing (note that some implementations
+put the heading inside the blockquote, while others do not).
+(John Gruber has also spoken <a href="http://article.gmane.org/gmane.text.markdown.general/2146" target="_blank" rel="noopener noreferrer">in favor of requiring the blank
+lines<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.)</p></li> <li><p>Is a blank line needed before an indented code block?
+(<code>Markdown.pl</code> requires it, but this is not mentioned in the
+documentation, and some implementations do not require it.)</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>paragraph
+<span class="token code keyword">    code?</span>
+</code></pre></div></li> <li><p>What is the exact rule for determining when list items get
+wrapped in <code>&lt;p&gt;</code> tags?  Can a list be partially &quot;loose&quot; and partially
+&quot;tight&quot;?  What should we do with a list like this?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span> one
+
+<span class="token list punctuation">2.</span> two
+<span class="token list punctuation">3.</span> three
+</code></pre></div><p>Or this?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span>  one
+<span class="token code keyword">    - a</span>
+
+<span class="token code keyword">    - b</span>
+<span class="token list punctuation">2.</span>  two
+</code></pre></div><p>(There are some relevant comments by John Gruber
+<a href="http://article.gmane.org/gmane.text.markdown.general/2554" target="_blank" rel="noopener noreferrer">here<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.)</p></li> <li><p>Can list markers be indented?  Can ordered list markers be right-aligned?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code> <span class="token list punctuation">8.</span> item 1
+ <span class="token list punctuation">9.</span> item 2
+<span class="token list punctuation">10.</span> item 2a
+</code></pre></div></li> <li><p>Is this one list with a thematic break in its second item,
+or two lists separated by a thematic break?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">*</span> a
+<span class="token hr punctuation">* * * * *</span>
+<span class="token list punctuation">*</span> b
+</code></pre></div></li> <li><p>When list markers change from numbers to bullets, do we have
+two lists or one?  (The Markdown syntax description suggests two,
+but the perl scripts and many other implementations produce one.)</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span> fee
+<span class="token list punctuation">2.</span> fie
+<span class="token list punctuation">-</span>  foe
+<span class="token list punctuation">-</span>  fum
+</code></pre></div></li> <li><p>What are the precedence rules for the markers of inline structure?
+For example, is the following a valid link, or does the code span
+take precedence ?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>[a backtick (<span class="token code keyword">`)](/url) and [another backtick (`</span>)](/url).
+</code></pre></div></li> <li><p>What are the precedence rules for markers of emphasis and strong
+emphasis?  For example, how should the following be parsed?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token italic"><span class="token punctuation">*</span>foo <span class="token punctuation">*</span></span>bar<span class="token italic"><span class="token punctuation">*</span> baz<span class="token punctuation">*</span></span>
+</code></pre></div></li> <li><p>What are the precedence rules between block-level and inline-level
+structure?  For example, how should the following be parsed?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">-</span> `a long code span can contain a hyphen like this
+  <span class="token list punctuation">-</span> and it can screw things up`
+</code></pre></div></li> <li><p>Can list items include section headings?  (<code>Markdown.pl</code> does not
+allow this, but does allow blockquotes to include headings.)</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">-</span> # Heading
+</code></pre></div></li> <li><p>Can list items be empty?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">*</span> a
+*
+<span class="token list punctuation">*</span> b
+</code></pre></div></li> <li><p>Can link references be defined inside block quotes or list items?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token blockquote punctuation">&gt;</span> Blockquote [foo].
+<span class="token blockquote punctuation">&gt;</span>
+<span class="token blockquote punctuation">&gt;</span> <span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">foo</span><span class="token punctuation">]</span><span class="token punctuation">:</span> /url</span>
+</code></pre></div></li> <li><p>If there are multiple definitions for the same reference, which takes
+precedence?</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">foo</span><span class="token punctuation">]</span><span class="token punctuation">:</span> /url1</span>
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">foo</span><span class="token punctuation">]</span><span class="token punctuation">:</span> /url2</span>
+
+<span class="token url">[foo][]</span>
+</code></pre></div></li></ol> <p>In the absence of a spec, early implementers consulted <code>Markdown.pl</code>
+to resolve these ambiguities.  But <code>Markdown.pl</code> was quite buggy, and
+gave manifestly bad results in many cases, so it was not a
+satisfactory replacement for a spec.</p> <p>Because there is no unambiguous spec, implementations have diverged
+considerably.  As a result, users are often surprised to find that
+a document that renders one way on one system (say, a github wiki)
+renders differently on another (say, converting to docbook using
+pandoc).  To make matters worse, because nothing in Markdown counts
+as a &quot;syntax error,&quot; the divergence often isn't discovered right away.</p> <h2 id="about-this-document"><a href="#about-this-document" aria-hidden="true" class="header-anchor">#</a> About this document</h2> <p>This document attempts to specify Markdown syntax unambiguously.
+It contains many examples with side-by-side Markdown and
+HTML.  These are intended to double as conformance tests.  An
+accompanying script <code>spec_tests.py</code> can be used to run the tests
+against any Markdown program:</p> <pre><code>python test/spec_tests.py --spec spec.txt --program PROGRAM
+</code></pre> <p>Since this document describes how Markdown is to be parsed into
+an abstract syntax tree, it would have made sense to use an abstract
+representation of the syntax tree instead of HTML.  But HTML is capable
+of representing the structural distinctions we need to make, and the
+choice of HTML for the tests makes it possible to run the tests against
+an implementation without writing an abstract syntax tree renderer.</p> <p>This document is generated from a text file, <code>spec.txt</code>, written
+in Markdown with a small extension for the side-by-side tests.
+The script <code>tools/makespec.py</code> can be used to convert <code>spec.txt</code> into
+HTML or CommonMark (which can then be converted into other formats).</p> <p>In the examples, the <code>→</code> character is used to represent tabs.</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/" class="prev router-link-active">
+          0 Home
+        </a></span> <span class="next"><a href="/2.Preliminaries.html">
+          2 Preliminaries
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/4.b69c7f9c.js" defer></script><script src="/assets/js/app.f781b73a.js" defer></script>
+  </body>
+</html>

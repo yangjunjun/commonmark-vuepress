@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Preliminaries | CommonMark Spec</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.56cb666a.css" as="style"><link rel="preload" href="/assets/js/app.f781b73a.js" as="script"><link rel="preload" href="/assets/js/5.56fac433.js" as="script"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.0f7c7ffe.js"><link rel="prefetch" href="/assets/js/4.b69c7f9c.js"><link rel="prefetch" href="/assets/js/6.11117854.js"><link rel="prefetch" href="/assets/js/7.accca9e3.js"><link rel="prefetch" href="/assets/js/8.64a5eca8.js"><link rel="prefetch" href="/assets/js/9.9a3e5730.js"><link rel="prefetch" href="/assets/js/10.c4ec4b3d.js"><link rel="prefetch" href="/assets/js/11.d4500ffb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.56cb666a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CommonMark Spec</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="http://spec.commonmark.org/0.28/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Site
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/commonmark/CommonMark" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="http://spec.commonmark.org/0.28/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Site
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/commonmark/CommonMark" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Original Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">0 Home</a></li><li><a href="/1.Introduction.html" class="sidebar-link">1 Introduction</a></li><li><a href="/2.Preliminaries.html" class="active sidebar-link">2 Preliminaries</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/2.Preliminaries.html#characters-and-lines" class="sidebar-link">Characters and lines</a></li><li class="sidebar-sub-header"><a href="/2.Preliminaries.html#tabs" class="sidebar-link">Tabs</a></li><li class="sidebar-sub-header"><a href="/2.Preliminaries.html#insecure-characters" class="sidebar-link">Insecure characters</a></li></ul></li><li><a href="/3.Blocks_and_inlines.html" class="sidebar-link">3 Blocks and inlines</a></li><li><a href="/4.Leaf_blocks.html" class="sidebar-link">4 Leaf blocks</a></li><li><a href="/5.Container_blocks.html" class="sidebar-link">5 Container blocks</a></li><li><a href="/6.Inlines.html" class="sidebar-link">6 Inlines</a></li><li><a href="/7.Appendix_A_parsing_strategy.html" class="sidebar-link">Appendix: A parsing strategy</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="preliminaries"><a href="#preliminaries" aria-hidden="true" class="header-anchor">#</a> Preliminaries</h1> <h2 id="characters-and-lines"><a href="#characters-and-lines" aria-hidden="true" class="header-anchor">#</a> Characters and lines</h2> <p>Any sequence of [characters] is a valid CommonMark
+document.</p> <p>A <a href="@">character</a> is a Unicode code point.  Although some
+code points (for example, combining accents) do not correspond to
+characters in an intuitive sense, all code points count as characters
+for purposes of this spec.</p> <p>This spec does not specify an encoding; it thinks of lines as composed
+of [characters] rather than bytes.  A conforming parser may be limited
+to a certain encoding.</p> <p>A <a href="@">line</a> is a sequence of zero or more [characters]
+other than newline (<code>U+000A</code>) or carriage return (<code>U+000D</code>),
+followed by a [line ending] or by the end of file.</p> <p>A <a href="@">line ending</a> is a newline (<code>U+000A</code>), a carriage return
+(<code>U+000D</code>) not followed by a newline, or a carriage return and a
+following newline.</p> <p>A line containing no characters, or a line containing only spaces
+(<code>U+0020</code>) or tabs (<code>U+0009</code>), is called a <a href="@">blank line</a>.</p> <p>The following definitions of character classes will be used in this spec:</p> <p>A <a href="@">whitespace character</a> is a space
+(<code>U+0020</code>), tab (<code>U+0009</code>), newline (<code>U+000A</code>), line tabulation (<code>U+000B</code>),
+form feed (<code>U+000C</code>), or carriage return (<code>U+000D</code>).</p> <p><a href="@">Whitespace</a> is a sequence of one or more [whitespace
+characters].</p> <p>A <a href="@">Unicode whitespace character</a> is
+any code point in the Unicode <code>Zs</code> general category, or a tab (<code>U+0009</code>),
+carriage return (<code>U+000D</code>), newline (<code>U+000A</code>), or form feed
+(<code>U+000C</code>).</p> <p><a href="@">Unicode whitespace</a> is a sequence of one
+or more [Unicode whitespace characters].</p> <p>A <a href="@">space</a> is <code>U+0020</code>.</p> <p>A <a href="@">non-whitespace character</a> is any character
+that is not a [whitespace character].</p> <p>An <a href="@">ASCII punctuation character</a>
+is <code>!</code>, <code>&quot;</code>, <code>#</code>, <code>$</code>, <code>%</code>, <code>&amp;</code>, <code>'</code>, <code>(</code>, <code>)</code>,
+<code>*</code>, <code>+</code>, <code>,</code>, <code>-</code>, <code>.</code>, <code>/</code>, <code>:</code>, <code>;</code>, <code>&lt;</code>, <code>=</code>, <code>&gt;</code>, <code>?</code>, <code>@</code>,
+<code>[</code>, <code>\</code>, <code>]</code>, <code>^</code>, <code>_</code>, <code>`</code>, <code>{</code>, <code>|</code>, <code>}</code>, or <code>~</code>.</p> <p>A <a href="@">punctuation character</a> is an [ASCII
+punctuation character] or anything in
+the general Unicode categories  <code>Pc</code>, <code>Pd</code>, <code>Pe</code>, <code>Pf</code>, <code>Pi</code>, <code>Po</code>, or <code>Ps</code>.</p> <h2 id="tabs"><a href="#tabs" aria-hidden="true" class="header-anchor">#</a> Tabs</h2> <p>Tabs in lines are not expanded to [spaces].  However,
+in contexts where whitespace helps to define block structure,
+tabs behave as if they were replaced by spaces with a tab stop
+of 4 characters.</p> <p>Thus, for example, a tab can be used instead of four spaces
+in an indented code block.  (Note, however, that internal
+tabs are passed through as literal tabs, not expanded to
+spaces.)</p> <div class="language-example extra-class"><pre class="language-text"><code>→foo→baz→→bim
+.
+&lt;pre&gt;&lt;code&gt;foo→baz→→bim
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>  →foo→baz→→bim
+.
+&lt;pre&gt;&lt;code&gt;foo→baz→→bim
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>    a→a
+    ὐ→a
+.
+&lt;pre&gt;&lt;code&gt;a→a
+ὐ→a
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre></div><p>In the following example, a continuation paragraph of a list
+item is indented with a tab; this has exactly the same effect
+as indentation with four spaces would:</p> <div class="language-example extra-class"><pre class="language-text"><code>  - foo
+
+→bar
+.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;foo&lt;/p&gt;
+&lt;p&gt;bar&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>- foo
+
+→→bar
+.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;foo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  bar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><p>Normally the <code>&gt;</code> that begins a block quote may be followed
+optionally by a space, which is not considered part of the
+content.  In the following case <code>&gt;</code> is followed by a tab,
+which is treated as if it were expanded into three spaces.
+Since one of these spaces is considered part of the
+delimiter, <code>foo</code> is considered to be indented six spaces
+inside the block quote context, so we get an indented
+code block starting with two spaces.</p> <div class="language-example extra-class"><pre class="language-text"><code>&gt;→→foo
+.
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  foo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>-→→foo
+.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;  foo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>    foo
+→bar
+.
+&lt;pre&gt;&lt;code&gt;foo
+bar
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code> - foo
+   - bar
+→ - baz
+.
+&lt;ul&gt;
+&lt;li&gt;foo
+&lt;ul&gt;
+&lt;li&gt;bar
+&lt;ul&gt;
+&lt;li&gt;baz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>#→Foo
+.
+&lt;h1&gt;Foo&lt;/h1&gt;
+</code></pre></div><div class="language-example extra-class"><pre class="language-text"><code>*→*→*→
+.
+&lt;hr /&gt;
+</code></pre></div><h2 id="insecure-characters"><a href="#insecure-characters" aria-hidden="true" class="header-anchor">#</a> Insecure characters</h2> <p>For security reasons, the Unicode character <code>U+0000</code> must be replaced
+with the REPLACEMENT CHARACTER (<code>U+FFFD</code>).</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/1.Introduction.html" class="prev">
+          1 Introduction
+        </a></span> <span class="next"><a href="/3.Blocks_and_inlines.html">
+          3 Blocks and inlines
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/5.56fac433.js" defer></script><script src="/assets/js/app.f781b73a.js" defer></script>
+  </body>
+</html>
